@@ -5,6 +5,7 @@ package edu.nwmissouri.zoo10group;
  * @author Jayanth Naramsetty
  */
 public class LifetimeMember extends Visitor {
+
     /**
      * we declares the duration of the membership
      */
@@ -12,18 +13,29 @@ public class LifetimeMember extends Visitor {
     private int membershipDuration;
 
     /**
-     *  LifetimeMember constructor gives the entranceFee,discount,groupSize,membershipDuration
-     * 
+     * LifetimeMember constructor gives the
+     * entranceFee,discount,groupSize,membershipDuration
+     *
      */
     public LifetimeMember() {
         this.entranceFee = 50;
-        this.discount= 20;
-        this.groupSize=1;
-        this.membershipDuration=0;
+        this.discount = 20;
+        this.groupSize = 1;
+        this.membershipDuration = 0;
+
+        try {
+            int arr[] = new int[4];
+            System.out.println("Access element three :" + arr[8]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception thrown  :" + e);
+        } finally {
+            System.out.println("Out of the block");
+        }
     }
 
     /**
-     *gets membership Duration
+     * gets membership Duration
+     *
      * @return
      */
     public int getMembershipDuration() {
@@ -32,6 +44,7 @@ public class LifetimeMember extends Visitor {
 
     /**
      * sets membership duration
+     *
      * @param membershipDuration
      */
     public void setMembershipDuration(int membershipDuration) {
@@ -39,7 +52,8 @@ public class LifetimeMember extends Visitor {
     }
 
     /**
-     *gets entrance fee
+     * gets entrance fee
+     *
      * @return
      */
     public double getEntranceFee() {
@@ -47,7 +61,8 @@ public class LifetimeMember extends Visitor {
     }
 
     /**
-     *sets entrance fee
+     * sets entrance fee
+     *
      * @param entranceFee
      */
     public void setEntranceFee(double entranceFee) {
@@ -55,7 +70,8 @@ public class LifetimeMember extends Visitor {
     }
 
     /**
-     *gets discount
+     * gets discount
+     *
      * @return
      */
     public double getDiscount() {
@@ -63,7 +79,8 @@ public class LifetimeMember extends Visitor {
     }
 
     /**
-     *sets discount
+     * sets discount
+     *
      * @param discount
      */
     public void setDiscount(double discount) {
@@ -71,7 +88,8 @@ public class LifetimeMember extends Visitor {
     }
 
     /**
-     *gets group size
+     * gets group size
+     *
      * @return
      */
     public int getGroupSize() {
@@ -79,11 +97,13 @@ public class LifetimeMember extends Visitor {
     }
 
     /**
-     *is sets the group size and also it is a responsive type we can set the what ever group size it is
+     * is sets the group size and also it is a responsive type we can set the
+     * what ever group size it is
+     *
      * @param groupSize
      */
     public void setGroupSize(int groupSize) {
         this.groupSize = groupSize;
     }
-    
+
 }
